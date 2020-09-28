@@ -1,1 +1,31 @@
-*{font-family:'Roboto', sans-serif}header{box-shadow:0px 0px 16px rgba(38,38,38,0.16)}.input{border:none;background:inherit;border-radius:0;border-bottom:1px solid #757575;outline:none}.footer{background-color:#262626;margin-top:5rem}.card{margin-bottom:2rem}.logo_row{border-bottom:1px solid #757575}
+* {
+    font-family: 'Roboto', sans-serif
+}
+
+header {
+    box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16)
+}
+a {
+    scroll-behavior: smooth;
+}
+.input {
+    border: none;
+    background: inherit;
+    border-radius: 0;
+    border-bottom: 1px solid #757575;
+    outline: none
+}
+
+.footer {
+    background-color: #262626;
+    margin-top: 5rem
+}
+
+.card {
+    margin-bottom: 2rem
+}
+
+.logo_row {
+    border-bottom: 1px solid #757575
+}
+

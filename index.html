@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>UBEREATS</title>
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="icons/Icon.svg">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
@@ -14,10 +14,10 @@
 
 <body>
 
-    <header >
+    <header id="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light pl-0 pr-0">
-                <a class="navbar-brand " href="#"><img src="icons/logo.svg" alt="logo"></a>
+                <a class="navbar-brand " href="#header"><img src="icons/logo.svg" alt="logo"></a>
                 <button class="navbar-toggler " type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -30,176 +30,461 @@
                             <a class="nav-link text_color" href="#">Компания</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-color" href="#">Каталог</a>
+                            <a class="nav-link text-color" href="#catalog">Каталог</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link text-color" href="#">
+                            <a class="nav-link text-color" href="#contacts">
                                 Контакты
                             </a>
                         </li>
                     </ul>
 
-                    <form class="form-inline">
-                        <a href="#" class="text-dark"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16"
-                                class="bi bi-cart3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="#57AD56" fill-rule="evenodd"
+                    <!--  -->
+
+                    <form class="form-inline" action="#">
+                        <a href="#" class="btn btn-success text-dark mr-2" data-toggle="modal" data-target="#basket"><svg width="1.5em" height="1.5em"
+                                viewBox="0 0 16 16" class="bi bi-cart3" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#fff" fill-rule="evenodd"
                                     d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                             </svg></a>
-                        <button class="btn btn-secondary ml-4" type="submit">Войти</button>
+                        <button class="btn btn-secondary " type="submit" data-toggle="modal"
+                            data-target="#signin">Войти</button>
                     </form>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section>
+    <!-- <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-xs-12 col-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <input type="text" class="input-group-text mt-5 mb-5 w-100 text-left input"
                         placeholder="Поиск по ресторанам и кухням">
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
-    <section>
+    <section class="mt-5 mb-5">
         <div class="container">
-            <h4 class="font-weight-normal">Рестораны в Москве</h4>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="offer">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-interval="4000">
+                                    <a href="#"><img src="img/offer.jpg" class="d-block w-100" alt="product"></a>
+                                    <div class="product_info carousel-caption d-none d-md-block">
+                                        <div
+                                            class="d-flex justify-content-around text-dark bg-white w-50 mr-auto ml-auto align-items-center p-2">
+                                            <div class="text-left">
+                                                <h5 class="mb-1">Трактир «Пушкин»</h5>
+                                                <p class="m-0">₽₽₽ • Европейская</p>
+                                            </div>
+                                            <div>
+                                                <a type="button" class="btn bg-dark text-white card-text"
+                                                    data-toggle="modal" data-target="#exampleModal">
+                                                    30 - 40 мин
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-interval="4500">
+                                    <img src="img/offer-2.jpg" class="d-block w-100" alt="product">
+                                    <div class="product_info carousel-caption d-none d-md-block">
+                                        <div
+                                            class="d-flex justify-content-around text-dark bg-white w-50 mr-auto ml-auto align-items-center p-2">
+                                            <div class="text-left">
+                                                <h5 class="mb-1">Сельдь на бородинском хлебе</h5>
+                                                <p class="m-0">₽₽₽ • Европейская</p>
+                                            </div>
+                                            <div>
+                                                <a type="button" class="btn bg-dark text-white card-text"
+                                                    data-toggle="modal" data-target="#exampleModal">
+                                                    30 - 40 мин
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" data-interval="5000">
+                                    <img src="img/offer.jpg" class="d-block w-100" alt="product">
+                                    <div class="product_info carousel-caption d-none d-md-block">
+                                        <div
+                                            class="d-flex justify-content-around text-dark bg-white w-50 mr-auto ml-auto align-items-center p-2">
+                                            <div class="text-left">
+                                                <h5 class="mb-1">Трактир «Пушкин»</h5>
+                                                <p class="m-0">₽₽₽ • Европейская</p>
+                                            </div>
+                                            <div>
 
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="img/1.png" class="card-img-top" alt="product">
-                        <div class="card-body">
-                            <h5 class="card-title">Макдоналдс — Газетный</h5>
-                            <p class="card-text text-muted"><small class="text-muted"></small>₽₽ • Бургеры</small></p>
-                            <p class="card-text">25 - 35 мин</p>
+                                                <a type="button" class="btn bg-dark text-white card-text"
+                                                    data-toggle="modal" data-target="#exampleModal">
+                                                    40 - 50 мин
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="img/2.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">DimSum & Co — ЦДМ</h5>
-                            <p class="card-text text-muted"><small class="text-muted"></small>₽ • Японская • Китайская •
-                                Азиатская </small></p>
-                            <p class="card-text">40 - 50 мин</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="img/3.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">ДвижОК — Манежная</h5>
-                            <p class="card-text text-muted"><small class="text-muted"></small>₽ • Американская •
-                                Европейская</small></p>
-                            <p class="card-text">35 - 45 мин</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="img/4.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">НЯ — NHA</h5>
-                            <p class="card-text text-muted"><small class="text-muted"></small>₽₽ • Вьетнамская</small>
-                            </p>
-                            <p class="card-text">30 - 40 мин</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="img/5.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Точка Дзы — Цветной</h5>
-                            <p class="card-text text-muted"><small class="text-muted"></small>₽₽ • Вьетнамская</small>
-                            </p>
-                            <p class="card-text">40 - 50 мин</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="img/6.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Cinnabon</h5>
-                            <p class="card-text text-muted"><small class="text-muted"></small>₽ • Выпечка • Десерты •
-                                Капкейки</small></p>
-                            <p class="card-text">25 - 35 мин</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="img/7.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">PIZZELOVE</h5>
-                            <p class="card-text text-muted"><small class="text-muted"></small>₽₽ • Пицца</small></p>
-                            <p class="card-text">15 - 25 мин</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="img/8.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Zю кафе — Тверская</h5>
-                            <p class="card-text text-muted"><small class="text-muted"></small>₽₽ • Японская</small></p>
-                            <p class="card-text">25 - 35 мин</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="img/9.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Bar BQ Cafe — Манежная</h5>
-                            <p class="card-text text-muted"><small class="text-muted"></small>₽₽₽ • Европейская</small>
-                            </p>
-                            <p class="card-text">30 - 40 мин</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <footer class="footer ">
+    <section id="catalog" class="mt-5">
+        <div class="container">
+
+            <!-- <h4 class="font-weight-normal ">Рестораны в Москве </h4> -->
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="snacks-tab" data-toggle="tab" href="#snacks" role="tab"
+                        aria-controls="snacks" aria-selected="true">Закуски</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="salads-tab" data-toggle="tab" href="#salads" role="tab"
+                        aria-controls="salads" aria-selected="false">Салаты</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="dishes-tab" data-toggle="tab" href="#dishes" role="tab"
+                        aria-controls="dishes" aria-selected="false">Горячие блюда</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="garnish-tab" data-toggle="tab" href="#garnish" role="tab"
+                        aria-controls="garnish" aria-selected="false">Гарниры</a>
+                </li>
+
+            </ul>
+            <div class="tab-content mt-3" id="myTabContent">
+                <div class="tab-pane fade show active" id="snacks" role="tabpanel" aria-labelledby="snacks-tab">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/1.png" class="card-img-top" alt="product">
+                                <div class="card-body">
+                                    <h5 class="card-title">Макдоналдс — Газетный</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽₽ •
+                                        Бургеры</small></p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        25 - 35 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/4.png" class="card-img-top card_img" alt="product">
+                                <div class="card-body">
+                                    <h5 class="card-title">Бургер — Газетный</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽₽ •
+                                        Бургеры</small></p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        30 - 35 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">DimSum & Co — ЦДМ</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽ • Японская •
+                                        Китайская •
+                                        Азиатская </small></p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        40 - 50 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/3.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">ДвижОК — Манежная</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽ • Американская •
+                                        Европейская</small></p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        35 - 45 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/7.png" class="card-img-top" alt="product">
+                                <div class="card-body">
+                                    <h5 class="card-title">ДвижОК — Манежная</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽ • Американская •
+                                        Европейская</small></p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        35 - 45 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/5.png" class="card-img-top" alt="product">
+                                <div class="card-body">
+                                    <h5 class="card-title">Манежная - Кофе</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽ •
+                                        Американская</small></p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        10 - 15 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="salads" role="tabpanel" aria-labelledby="salads-tab">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/4.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">НЯ — NHA</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽₽ •
+                                        Вьетнамская</small>
+                                    </p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        30 - 40 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/5.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Точка Дзы — Цветной</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽₽ •
+                                        Вьетнамская</small>
+                                    </p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        40 - 50 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/6.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cinnabon</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽ • Выпечка •
+                                        Десерты •
+                                        Капкейки</small></p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        25 - 35 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/10.jpeg" class="card-img-top" alt="product">
+                                <div class="card-body">
+                                    <h5 class="card-title">ДвижОК — Манежная</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽ • Американская •
+                                        Европейская</small></p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        35 - 45 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/11.jpeg" class="card-img-top" alt="product">
+                                <div class="card-body">
+                                    <h5 class="card-title">ДвижОК — Манежная</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽ • Американская •
+                                        Европейская</small></p>
+
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        35 - 45 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="dishes" role="tabpanel" aria-labelledby="dishes-tab">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/7.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">PIZZELOVE</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽₽ • Пицца</small>
+                                    </p>
+
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        15 - 25 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/8.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Zю кафе — Тверская</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽₽ •
+                                        Японская</small></p>
+
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        25 - 35 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="img/9.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bar BQ Cafe — Манежная</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽₽₽ •
+                                        Европейская</small>
+                                    </p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        30 - 40 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="garnish" role="tabpanel" aria-labelledby="garnish-tab">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                            <div class="card">
+                                <img src="img/9.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bar BQ Cafe — Манежная</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽₽₽ •
+                                        Европейская</small>
+                                    </p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        30 - 40 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/5.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Точка Дзы — Цветной</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽₽ •
+                                        Вьетнамская</small>
+                                    </p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        40 - 50 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="card">
+                                <img src="img/3.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">ДвижОК — Манежная</h5>
+                                    <p class="card-text text-muted"><small class="text-muted"></small>₽ • Американская •
+                                        Европейская</small></p>
+                                    <a type="button" class="btn btn-success card-text" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        35 - 45 мин
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contacts" class="footer">
         <div class="container">
             <div class="row pb-5 pt-5 logo_row">
-                <div class="col-lg-12 col-md-12 col-xs-12 col-12">
-                    <a href="#"><img src="icons/white-logo.svg" alt="logo"></a>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <a href="#header"><img src="icons/white-logo.svg" alt="logo"></a>
                 </div>
             </div>
             <div class="row pb-5 pt-5 logo_row">
-                <div class="col-lg-4 col-md-4 col-xs-12 col-12">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
                     <select class="custom-select mb-4">
                         <option selected>Russian</option>
                         <option value="1">English</option>
                         <option value="2">Kazakh</option>
                     </select>
-                    <a href="#">UberEats</a>
 
-                    <div class="row mt-4 mb-3">
-                        <a class="mr-3 ml-3" href="#"><img src="icons/facebook.svg" alt=""></a>
-                        <a class="mr-3" href="#"><img src="icons/twitter.svg" alt=""></a>
-                        <a href="#"><img src="icons/instagram.svg" alt=""></a>
-                    </div>
+                    <a href="https://www.google.com/search?client=opera-gx&q=ubereats&sourceid=opera&ie=UTF-8&oe=UTF-8"
+                        target="_blank">#UberEats</a>
+                    <!-- <div class="row mt-4 mb-3"> -->
+                    <a class="mr-3 ml-3" href="https://www.facebook.com/UberEats/"><img src="icons/facebook.svg"
+                            alt="ubereats"></a>
+
+                    <a class="mr-3" href="https://twitter.com/ubereats" alt="ubereats"><img src="icons/twitter.svg"
+                            alt="ubereats"></a>
+                    <a href="https://www.instagram.com/ubereats/"><img src="icons/instagram.svg" alt=""></a>
+                    <!-- </div> -->
                 </div>
 
-                <div class="col-lg-3 offset-lg-1 col-md-4 col-xs-12 col-12">
+                <div class="col-xl-3 col-lg-3 offset-lg-1 col-md-4 col-sm-12 col-12">
                     <ul class="list-group list-group-flush text-white list-unstyled">
                         <li class="mb-3"><a class="text-white" href="#">Об UberEats</a></li>
                         <li class="mb-3"><a class="text-white" href="#">Станьте партнёром по доставке</a></li>
@@ -207,7 +492,7 @@
                     </ul>
                 </div>
 
-                <d class="offset-lg-1 col-lg-3 col-md-4 col-xs-12 col-12">
+                <d class="col-xl-3 offset-xl-1 offset-lg-1 col-lg-3 col-md-4 col-sm-12 col-12">
                     <ul class="list-group list-group-flush  list-unstyled">
                         <li class="mb-3"><a class="text-white" href="#">Все города</a></li>
                         <li class="mb-3"><a class="text-white" href="#">Цены</a></li>
@@ -218,19 +503,23 @@
 
             </div>
             <div class="row pb-5 pt-5 logo_row">
-                <div class="col-lg-12 col-md-12 col-xs-12 col-12 text-center">
-                    <img class="mr-4" src="icons/appStore.svg" alt="">
-                    <img src="icons/playMarket.svg" alt="">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                    <a href="https://apps.apple.com/us/app/uber-eats-food-delivery/id1058959277" target="_blank"><img
+                            class="mr-4" src="icons/appStore.svg" alt=""></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.ubercab.eats" target="_blank"><img
+                            src="icons/playMarket.svg" alt=""></a>
+
                 </div>
             </div>
-            
+
             <div class="row pb-5 pt-5 text-light">
-                <div class="col-lg-4 col-md-4 col-xs-12 col-12">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                     <p>© 2017 Uber Technologies Inc.</p>
                 </div>
-                <div class="col-lg-4  col-md-4 col-xs-12 col-12 "><a class="text-light" href="#">Обработка персональных
+                <div class="col-xl-4 col-lg-4  col-md-4 col-sm-12 col-12 "><a class="text-light" href="#">Обработка
+                        персональных
                         данных</a></div>
-                <div class="offset-lg-1 col-lg-3 col-md-4 col-xs-12 col-12"><a class="text-light"
+                <div class="col-xl-3 offset-xl-1 offset-lg-1 col-lg-3 col-md-4 col-sm-12 col-12"><a class="text-light"
                         href="#">Пользовательское соглашение</a>
                 </div>
             </div>
@@ -238,7 +527,141 @@
     </footer>
 
 
+    <!-- Modal Order -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog modal-dialog-centered">
+            <div class="modal-content  bg-warning text-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title " id="exampleModalLabel">UberEats</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form mt-2">
+                        <div class="position-relative form-group"><label for="address">Названия блюда</label><textarea
+                                id="comment" class="form-control" rows="2" placeholder="Точка Дзы — Цветной"></textarea>
+                        </div>
+                        <div class="position-relative form-group"><label for="phone">Номер телефона</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"><span class="input-group-text">+7</span></div>
+                                <input mask="(111)-111-11-11" type="tel" id="phone" class="form-control" maxlength="15"
+                                    size="15" placeholder="(___)-___-__-__" value="">
+                            </div>
+                        </div>
+                        <div class="position-relative form-group"><label for="address">Адрес доставки</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend"><span class="input-group-text">Казахстан</span></div>
+                                <input id="address" type="text" class="form-control" value="">
+                            </div>
+                        </div>
+                        <div class="position-relative form-group"><label for="address">Сообщения</label><textarea
+                                id="comment" class="form-control" rows="5" placeholder=""></textarea>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-success">Заказать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Modal Basket -->
+  <div class="modal fade" id="basket" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-success text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mt-4 mb-4">
+         <h5 class="text-warning">Ваш корзина пусть</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+          <button type="button" class="btn  bg-dark text-white">Ок</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal Sign IN -->
+    <div class="modal" id="signin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content  bg-secondary text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Вход</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Форма обратной связи -->
+                    <form id="feedbackForm" action="/" enctype="multipart/form-data" novalidate>
+                        <div class="form-row">
+                            <div class="col-sm-6">
+                                <!-- Имя пользователя -->
+                                <div class="form-group">
+                                    <label for="name" class="control-label">Имя</label>
+                                    <input id="name" type="text" name="name" class="form-control" value=""
+                                        placeholder="Имя" minlength="2" maxlength="30" required="required">
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- Email пользователя -->
+                                <div class="form-group">
+                                    <label for="email" class="control-label">Email-адрес</label>
+                                    <input id="email" type="email" name="email" required="required" class="form-control"
+                                        value="" placeholder="Email-адрес">
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Номер -->
+                        <div class="form-row">
+                            <div class="col-sm-6">
+                                <!-- Пароль  -->
+                                <div class="form-group">
+                                    <label for="pass" class="control-label">Пароль</label>
+                                    <input id="pass" type="text" name="pass" class="form-control" value=""
+                                        placeholder="Праоль" minlength="2" maxlength="30" required="required">
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- Телефон пользователя -->
+                                <div class="form-group">
+                                    <label for="phone">Номер телефона</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend"><span class="input-group-text">+7</span></div>
+                                        <input mask="(111)-111-11-11" type="tel" id="phone" class="form-control"
+                                            maxlength="15" size="15" placeholder="(___)-___-__-__" value="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Сообщение пользователя -->
+                        <div class="form-group">
+                            <label for="message" class="control-label">Сообщение </label>
+                            <textarea id="message" name="message" class="form-control" rows="3"
+                                placeholder="Сообщение (не менее 20 символов)" minlength="20" maxlength="500"
+                                required="required"></textarea>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary float-right">Регистрация</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -249,7 +672,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
-  
+
 </body>
 
 </html>
