@@ -1,5 +1,5 @@
-# uberEate
-<h4 align="left">Сервис по доставке еды: Сделано в HTML, CSS, JS, Bootstrap, с анимациями</h4>
+# UberEats
+# <h4 align="left">Сервис по доставке еды: Сделано в HTML, CSS, JS, Bootstrap, с анимациями</h4>
 
 <h4 align="left">Cсылка на сайт: <a href="https://tolebijaksybai.github.io/uberEate/" target="_blank">Uber-Eats</a></h4>
 
