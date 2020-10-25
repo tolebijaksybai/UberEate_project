@@ -5,5 +5,4 @@
 
 <br/>
 
-<h4 align="left"> ![Delevery_food-home](https://user-images.githubusercontent.com/52714747/97110381-251e1000-1703-11eb-8918-e81867ae7afb.png)</h4>
 ![Delevery_food-home](https://user-images.githubusercontent.com/52714747/97110381-251e1000-1703-11eb-8918-e81867ae7afb.png)
